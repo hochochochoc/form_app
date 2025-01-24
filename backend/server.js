@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const OpenAI = require("openai");
 const multer = require("multer");
+const pool = require("./db");
 require("dotenv").config();
 
 const upload = multer();
@@ -41,7 +42,18 @@ app.post("/analyze-image", upload.single("image"), async (req, res) => {
       max_tokens: 300,
     });
 
-    res.json({ analysis: response.choices[0].message.content });
+    const analysis = response.choices[0].message.content;
+    const connection = await pool.getConnection();
+    try {
+      await connection.query(
+        "INSERT INTO analyses (analysis_text) VALUES (?)",
+        [analysis],
+      );
+    } finally {
+      connection.release();
+    }
+
+    res.json({ analysis });
   } catch (error) {
     console.error("Error:", error);
     res.status(500).json({ error: "Analysis failed", details: error.message });
