@@ -26,7 +26,7 @@ app.post("/analyze-image", upload.single("image"), async (req, res) => {
           content: [
             {
               type: "text",
-              text: "And are they arching their back correctly? Please detect excessive lumbar extension if it applies. How about their hand placement, too narrow or wide or correct? What could they do better? Give one short sentence for each question as if you were talking to the person. Leave out doubts about the context and any advice to consult a professional, it's already accounted for.",
+              text: "And are they arching their back correctly for the exercise? How about their hand placement, too narrow or wide or correct? What could they do better? Give one short sentence for each question as if you were talking to the person, do not start with a - symbol. Leave out doubts about the context and any advice to consult a professional, it's already accounted for.",
             },
             {
               type: "image_url",
