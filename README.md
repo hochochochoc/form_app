@@ -2,7 +2,7 @@
 
 Formly.ai is a web application that provides real-time feedback on exercise form by analyzing uploaded images using computer vision and AI.
 
-https://github.com/hochochochoc/form_app/assets/156487249/a4f7ef21-33c5-4d2e-97fb-1bde0d67b968
+![Demo GIF](public/formly_video.gif)
 
 ## Overview
 
