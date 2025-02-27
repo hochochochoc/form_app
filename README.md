@@ -2,6 +2,8 @@
 
 Formly.ai is a web application that provides real-time feedback on exercise form by analyzing uploaded images using computer vision and AI.
 
+https://github.com/hochochochoc/form_app/assets/156487249/a4f7ef21-33c5-4d2e-97fb-1bde0d67b968
+
 ## Overview
 
 Formly.ai allows users to upload images of themselves performing exercises and receive immediate feedback on their form. The application leverages the OpenAI API and Google Cloud Vision to analyze images and provide actionable feedback to help users improve their exercise technique and reduce the risk of injury.
@@ -87,28 +89,29 @@ cd formly-ai
 
 2. Install frontend dependencies:
 
-   ```
-   npm install
-   ```
+```
+npm install
+```
 
 3. Install backend dependencies:
 
-```cd backend
+```
+cd backend
 npm install
 ```
 
 4. Start the backend server:
 
-   ```
-   npm start
-   ```
+```
+npm start
+```
 
 5. In a new terminal, start the frontend development server:
 
-   ```
-   cd ..
-   npm run dev
-   ```
+```
+cd ..
+npm run dev
+```
 
 6. Open your browser and navigate to http://localhost:5173
 
@@ -124,26 +127,6 @@ npm install
 
 - `POST /analyze-image`: Analyzes an uploaded image and returns form feedback
 
-## Future Improvements
-
-- User accounts and authentication
-- History of previous form analyses
-- Video analysis support
-- More detailed exercise-specific feedback
-- Exercise recognition
-- Mobile app version
-
-## Security Considerations
-
-- The application stores images temporarily for analysis purposes only
-- Implement proper authentication before deploying publicly
-- Ensure database credentials are properly secured
-- Use HTTPS in production
-
 ## Disclaimer
 
 Formly.ai is designed to provide general feedback on exercise form and is not a replacement for professional coaching or medical advice. Users should exercise at their own risk and consult with fitness professionals for personalized guidance.
-
-```
-
-```

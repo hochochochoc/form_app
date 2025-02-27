@@ -5,7 +5,7 @@ interface AnalysisResponse {
   analysis: string;
 }
 
-const useTypewriter = (text: string, speed: number = 30) => {
+const useTypewriter = (text: string, speed: number = 20) => {
   const [displayedText, setDisplayedText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
 
